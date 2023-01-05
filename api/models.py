@@ -6,7 +6,7 @@ from .constants import *
 
 
 class Wilaya(models.Model):
-    nomWilaya=models.CharField(max_length=25 ,primary_key=True)
+    nomWilaya=models.CharField(max_length=25 ,primary_key=True,choices=WILAYAS)
 
     def __str__(self):
         return str(self.nomWilaya)
@@ -38,6 +38,7 @@ class Adresse(models.Model):
 
 class Annonce(models.Model):
     idAnnonce=models.UUIDField(primary_key=True,default=uuid.uuid4,editable=False)
+    Titre=models.CharField(max_length=20)
     Description = models.TextField(max_length=500,null=True)
     Tarif = models.IntegerField()
     DatePublication=models.DateTimeField(auto_now_add=True)
