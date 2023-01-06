@@ -8,7 +8,7 @@ function Annonce(props){
                     <div className="p-2">
                         <h4 className=" text font-bold pt-2" >{props.Titre}</h4>
                         <p className="max-10 pt-1.5">Date de Publication : {props.DatePublication}</p>
-                        <p className="pt-1.5">Tarif: {props.Tarif}/heure</p>
+                        <p className="pt-1.5">Tarif: {props.Tarif}DA/heure</p>
                         <div className="flex flex-row mt-2 gap-2 pt-1.5">
                             <a href="/"><img src="https://picsum.photos/seed/1/40/40" className="rounded-full max-h-10 max-w-10" alt="ProfilePicture" /></a>
                             <a className="text-gray-400 text-xs mt-2 hover:text-gray-700" href="/"> Houssem </a>
@@ -23,19 +23,3 @@ function Annonce(props){
 )}
 
 export default Annonce;
-
-// eslint-disable-next-line no-lone-blocks
-{/* <div class="mx-auto container ">
-            <div class="mx-auto containergrid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                <div class="rounded">
-                    <div v-for="(card, idx) in cards"  class=" h-64 flex flex-col justify-between bg-white dark:bg-gray-800 dark:border-gray-700 rounded-lg border border-gray-400 mb-6 py-5 px-4">
-                        <div>
-                            <h4 className="text-gray-800 dark:text-gray-100 font-bold mb-3">{props.Titre}</h4>
-                            <p className="text-gray-800 dark:text-gray-100 font-bold mb-3">Date de Publication : {props.DatePublication}</p>
-                            <p className="text-gray-800 dark:text-gray-100 font-bold mb-3">Tarif: {props.Tarif}</p>
-                            <button type="button" className="">Plus d'information</button>
-                        </div> 
-                    </div>
-                </div>
-            </div>
-        </div>  */}
