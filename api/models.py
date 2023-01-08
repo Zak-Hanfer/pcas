@@ -29,8 +29,8 @@ class BienImmob(models.Model):
 
 class Adresse(models.Model):
     idAdresse=models.UUIDField(primary_key=True,default=uuid.uuid4,editable=False)
-    nomWilaya=models.ForeignKey(Wilaya,on_delete=models.CASCADE)
-    NomCommune=models.ForeignKey(Commune,on_delete=models.CASCADE)
+    nomWilaya=models.ForeignKey(Wilaya,on_delete=models.CASCADE,related_name='AdresseWilaya')
+    NomCommune=models.ForeignKey(Commune,on_delete=models.CASCADE,related_name='AdresseCommune')
     Immobilier=models.ForeignKey(BienImmob,on_delete=models.CASCADE,related_name='AdresseBienImob')
 
     def getidCommune(self):
