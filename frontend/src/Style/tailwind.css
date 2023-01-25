@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.bg-PrincipalCol {
+    --tw-border-opacity: 1;
+    background-color: rgb(23 140 140 / var(--tw-border-opacity));
+  }
+  .focus\:border-PrincCol:focus {
+    --tw-border-opacity: 1;
+    border-color: rgb(23 140 140 / var(--tw-border-opacity));
+  }

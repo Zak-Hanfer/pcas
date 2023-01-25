@@ -1,10 +1,15 @@
 import React from "react";
-
+import AnnonceList from './AnnonceList';
+import Footer from './Footer';
+import Heada from "./Header";
 function App(){
     return(
-    <div className="App">
-        My APP
-    </div>
+        <div>
+            <Heada/>
+            <AnnonceList/>
+            <Footer/>
+        </div>
+        
     );
 }
 export default App;
