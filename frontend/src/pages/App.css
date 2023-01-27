@@ -1,0 +1,132 @@
+*{
+  margin:0;
+}
+
+.content{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.partd{
+  margin-top: 15%;
+  margin-left: 10%;
+}
+
+.p1{
+  font-size: 45px;
+  line-height: 1.2;
+  font-weight: 600px;
+  font-family: Poppins;
+}
+
+.p2{
+  font-size: 30px;
+  font-weight: 300px;
+  font-family: Poppins;
+}
+
+.p3{
+  margin-top: 20px;
+  line-height: 1.5;
+  font-size: 20px;
+}
+
+.sp1{
+  color: #4D47C3;
+}
+
+
+
+input{
+  height: 45px;
+  width: 97%;
+  margin-top: 10px;
+  background:  #F0EFFF;
+  border: none ;
+  border-radius: 5px;
+  padding-left: 10px;
+  color: #A7A3FF;
+  
+}
+
+
+button{
+  height: 50px;
+  width: 100%;
+  margin-top: 10px;
+  background-color:  #178C8C;
+  color:  #FFFFFF;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px ;
+  
+}
+
+
+.form{
+  margin-top: 6.5%;
+  margin-right: 9%;
+  padding:20px ;
+  width: 30%;
+  overflow: hidden;
+}
+#pf{
+margin-top: 30px;
+text-align: center;
+color: #B5B5B5;
+;
+}
+#inpt1{
+  margin-top: 5%;
+}
+#inpt2_fro_login{
+  margin-top: 20px;
+}
+#ps{
+  margin-top: 20px;
+  text-align: end;
+  color: #B5B5B5;
+
+}
+#btn_fro_login{
+  margin-top: 20px;
+}
+
+#icongoogle{
+margin-top: 10px;
+text-align: center;
+cursor: pointer;
+
+}
+
+
+/*********************************************/
+@media screen and ( max-width: 420px) { 
+  
+body{
+    margin:25px 0;
+    display: flex;
+    justify-content: center;
+  } 
+
+  .partd{
+    display: none;
+  } 
+
+  .form{
+    padding:2px;
+    overflow:visible;
+    width: 95%;
+    margin: 5px auto;
+  } 
+
+   input{
+    width: 93%;
+  } 
+ h1{
+  font-size: 28px;
+ }
+}
