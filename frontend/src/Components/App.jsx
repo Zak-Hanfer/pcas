@@ -2,14 +2,21 @@ import React from "react";
 import AnnonceList from './AnnonceList';
 import Footer from './Footer';
 import Heada from "./Header";
-import NavBar from "./teste";
+import FiDiv from "./Fdiv";
+import DetailsAnnonce from "./AnnoceDetails";
+import { BrowserRouter  ,Route,Routes } from "react-router-dom";
 function App(){
     return(
-        <div>
-            <NavBar/>
-            <AnnonceList/>
-            <Footer/>
-        </div>
+        <Routes>
+            <Route path="/" element={<><FiDiv/><AnnonceList/><Footer/></>}/>
+            <Route path="/AnnoceDetails" element={<DetailsAnnonce/>}/>
+        </Routes>
+            /* <div>
+                <FiDiv/>
+                <AnnonceList/>
+                <Footer/>
+            </div> */
+        
         
     );
 }

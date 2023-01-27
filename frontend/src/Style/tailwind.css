@@ -9,3 +9,14 @@
     --tw-border-opacity: 1;
     border-color: rgb(23 140 140 / var(--tw-border-opacity));
   }
+.aspect-image {
+  aspect-ratio: 16 / 7;
+}
+.border-PrincCol {
+  --tw-border-opacity: 1;
+  border-color: rgb(23 140 140 / var(--tw-border-opacity));
+}
+.text-PrincipalCol {
+  --tw-text-opacity: 1;
+  color: rgb(23 140 140 / var(--tw-text-opacity));
+}

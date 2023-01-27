@@ -15,7 +15,7 @@ function Annonce(props){
                             <a className="text-gray-400 text-xs mt-2 hover:text-gray-700" href="/"> Houssem </a>
                         </div>
                         <div className="flex flex-col justify-center items-center pt-1.5">
-                            <button className="text-[#178C8C] border border-[#178C8C] hover:bg-[#175D8A] hover:text-white active:bg-[#175D8A] font-bold  px-8 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">Plus d'information</button>
+                            <a href="./AnnoceDetails" className="text-[#178C8C] border border-[#178C8C] hover:bg-[#175D8A] hover:text-white active:bg-[#175D8A] font-bold  px-8 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">Plus d'information</a>
                         </div>
                         
                     </div>
