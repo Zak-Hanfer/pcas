@@ -1,6 +1,9 @@
 
 import React from "react";
+import { useParams } from "react-router-dom";
 function Annonce(props){
+    const path="./AnnoceDetails/"+props.Annonceid
+    // console.log(path);
     return(   
             <div className="relative inline-block duration-300 ease-in-out transition-transform transform hover:-translate-y-2 w-full p-1">
                 <div className="shadow-2xl rounded-2xl bg-white">
@@ -15,7 +18,8 @@ function Annonce(props){
                             <a className="text-gray-400 text-xs mt-2 hover:text-gray-700" href="/"> Houssem </a>
                         </div>
                         <div className="flex flex-col justify-center items-center pt-1.5">
-                            <a href="./AnnoceDetails" className="text-[#178C8C] border border-[#178C8C] hover:bg-[#175D8A] hover:text-white active:bg-[#175D8A] font-bold  px-8 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">Plus d'information</a>
+                            <a href={path} className="text-[#178C8C] border border-[#178C8C] hover:bg-[#175D8A] hover:text-white active:bg-[#175D8A] font-bold  px-8 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">Plus d'information </a>
+
                         </div>
                         
                     </div>

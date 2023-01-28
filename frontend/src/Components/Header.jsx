@@ -110,13 +110,13 @@ function Heada(){
                     <div className="lg:hidden md:hidden sm:inline-block sm:w-full">
                         <a
                             href="/"
-                            className="inline-block  w-full px-4 m-2 py-3 text-center text-black bg-PrincipalCol rounded-md shadow hover:bg-gray-100"
+                            className="inline-block  w-full px-4 m-2 py-3 text-center text-white bg-PrincipalCol rounded-md shadow hover:bg-gray-100"
                         >
                             Se connecter
                         </a>
                         <a
                             href="/"
-                            className="inline-block   w-full px-4 py-3 m-2 text-center text-black bg-PrincipalCol rounded-md shadow hover:bg-gray-100"
+                            className="inline-block   w-full px-4 py-3 m-2 text-center text-white bg-PrincipalCol rounded-md shadow hover:bg-gray-100"
                         >
                             S'inscire
                         </a>
@@ -126,13 +126,13 @@ function Heada(){
             <div className="hidden  md:inline-block">
                 <a
                     href="/"
-                    className="px-4 py-2 m-1 text-black bg-PrincipalCol rounded-md shadow hover:bg-gray-100"
+                    className="px-4 py-2 m-1 text-white bg-PrincipalCol rounded-md shadow hover:bg-gray-100"
                 >
                     Se connecter
                 </a>
                 <a
                     href="/"
-                    className="px-4 py-2 m-1 text-black bg-PrincipalCol rounded-md shadow hover:bg-gray-100"
+                    className="px-4 py-2 m-1 text-white bg-PrincipalCol rounded-md shadow hover:bg-gray-100"
                 >
                     S'inscrire
                 </a>

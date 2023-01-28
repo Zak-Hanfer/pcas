@@ -4,12 +4,13 @@ import Footer from './Footer';
 import Heada from "./Header";
 import FiDiv from "./Fdiv";
 import DetailsAnnonce from "./AnnoceDetails";
-import { BrowserRouter  ,Route,Routes } from "react-router-dom";
+import { BrowserRouter  ,Route,Routes,useParams } from "react-router-dom";
+
 function App(){
     return(
         <Routes>
             <Route path="/" element={<><FiDiv/><AnnonceList/><Footer/></>}/>
-            <Route path="/AnnoceDetails" element={<DetailsAnnonce/>}/>
+            <Route path="AnnoceDetails/:id" element={<DetailsAnnonce/>}/>
         </Routes>
             /* <div>
                 <FiDiv/>
