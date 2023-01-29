@@ -7,4 +7,5 @@ urlpatterns= [
     path('communes/',views.getCommune,name='Communes'),
     path('annonces/<str:pk>/',views.getAnnonce,name='Communes'),
     path('Adresses/',views.getLocalisations,name='adresses'),
+    path('photo/<str:pk>/',views.getImages,name='AnnoncePhotos')
 ]

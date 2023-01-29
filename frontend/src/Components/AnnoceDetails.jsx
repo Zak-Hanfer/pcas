@@ -1,18 +1,33 @@
 import React, { useEffect,useState } from "react";
 import Heada from "./Header";
 import { Params,useParams } from "react-router-dom";
+import Slider from "./CarouselSlider";
 
  const DetailsAnnonce=()=>{
     const  AnnonceId  = useParams();
     const [annonce ,setAnnonce]=useState("")
+    const [images,setImages]=useState([])
     useEffect(()=>{
           getAnnonce()
+          getImage()
     },[])
+
     let getAnnonce= async()=>{
         let response=await fetch(`http://127.0.0.1:8000/api/annonces/${AnnonceId.id}/`)
         let data = await response.json()
         setAnnonce(data)
     }
+    let getImage= async()=>{
+        let response2=await fetch(`http://127.0.0.1:8000/api/photo/${AnnonceId.id}/`)
+        var data = await response2.json()
+        setImages(data)
+    }
+
+
+     
+
+    
+
     const Nomwilaya=annonce && annonce.Localisation && annonce.Localisation.nomWilaya && annonce.Localisation.nomWilaya.nomWilaya
     const NomCommune=annonce && annonce.Localisation && annonce.Localisation.NomCommune && annonce.Localisation.NomCommune.NomCommune
     const NomImmobNumRue=annonce && annonce.Localisation && annonce.Localisation.Immobilier && annonce.Localisation.Immobilier.NumRue
@@ -22,8 +37,9 @@ import { Params,useParams } from "react-router-dom";
     <div className="lg:mx-40 my-10 border-solid shadow-2xl  rounded-2xl">
         <h1 className="p-5 text-2xl font-bold">{annonce.Titre}</h1>
         <div className="relative aspect-video mx-10 ">
-            <img className="w-full h-full rounded-2xl " src="https://bobbyhadz.com/images/blog/react-prevent-multiple-button-clicks/thumbnail.webp" alt="testeImages" />
+            <Slider slides={images}/>
         </div>
+        {/* <img key={image.image} className="w-full h-full rounded-2xl " src={'http://127.0.0.1:8000' + image.image} alt="testeImages" />) */}
         <div className="grid grid-cols-1 sm:grid-cols-3 ml-10 py-5 pt-5 gap-2">
             <div className="border-2 border-PrincCol shadow-2xl col-span-1 rounded-2xl">
                 <p className="pl-3 p-1">Annonceur:</p>

@@ -47,11 +47,14 @@ class Annonce(models.Model):
     Modalite=models.CharField(max_length=20,choices=MODALITIES,default=2)
     # personne=models.ForeignKey(User,auto_created=True,on_delete=models.CASCADE)
     Localisation=models.ForeignKey(Adresse,on_delete=models.CASCADE,related_name='AnnonceLoca')
-    def getadresse(self):
-        return self.Description
+    def getIdAnnonce(self):
+        return self.idAnnonce
 
-class photo(models.Model):
-    idPhoto=models.UUIDField(primary_key=True,default=uuid.uuid4,editable=False)
-    path=models.FilePathField()
+class Photo(models.Model):
+    idPhoto=models.UUIDField(default=uuid.uuid4,editable=False)
+    # path=models.FilePathField()
+    image=models.ImageField(upload_to="images/")
     annonce=models.ForeignKey(Annonce,on_delete=models.CASCADE)
+    def getAnnonceId(self):
+        return self.annonce.getIdAnnonce()
 

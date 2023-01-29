@@ -38,4 +38,10 @@ def getLocalisations(request):
     serialiser=LocaliSeria(adresse,many=True)    
     return Response(serialiser.data)
 
+@api_view(['GET'])
+def getImages(request,pk):
+    photo=Photo.objects.filter(annonce_id=pk)
+    serialiser=photoSeria(photo,many=True)
+    return Response(serialiser.data)
+
 

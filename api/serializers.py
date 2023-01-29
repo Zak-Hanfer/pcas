@@ -28,3 +28,9 @@ class AnnonceSeria(ModelSerializer):
     class Meta:
         model=Annonce
         fields=('__all__')
+
+class photoSeria(ModelSerializer):
+    Annonce=AnnonceSeria(many=False,read_only=True)
+    class Meta:
+        model=Photo
+        fields=('__all__')
