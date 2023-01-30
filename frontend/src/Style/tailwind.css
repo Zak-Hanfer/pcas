@@ -5,10 +5,14 @@
     --tw-border-opacity: 1;
     background-color: rgb(23 140 140 / var(--tw-border-opacity));
   }
-  .focus\:border-PrincCol:focus {
-    --tw-border-opacity: 1;
-    border-color: rgb(23 140 140 / var(--tw-border-opacity));
-  }
+.focus\:border-PrincCol:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(23 140 140 / var(--tw-border-opacity));
+}
+.bg-SecondryCol{
+  --tw-border-opacity: 1;
+    background-color: rgb(24 75 75 / var(--tw-border-opacity));
+}
 .aspect-image {
   aspect-ratio: 16 / 7;
 }

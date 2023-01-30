@@ -23,11 +23,6 @@ import Slider from "./CarouselSlider";
         setImages(data)
     }
 
-
-     
-
-    
-
     const Nomwilaya=annonce && annonce.Localisation && annonce.Localisation.nomWilaya && annonce.Localisation.nomWilaya.nomWilaya
     const NomCommune=annonce && annonce.Localisation && annonce.Localisation.NomCommune && annonce.Localisation.NomCommune.NomCommune
     const NomImmobNumRue=annonce && annonce.Localisation && annonce.Localisation.Immobilier && annonce.Localisation.Immobilier.NumRue
@@ -44,6 +39,7 @@ import Slider from "./CarouselSlider";
             <div className="border-2 border-PrincCol shadow-2xl col-span-1 rounded-2xl">
                 <p className="pl-3 p-1">Annonceur:</p>
                 <p className="pl-3 p-1">Chargé le:{annonce.DatePublication}</p>
+                <p className="pl-3 p-1">email:</p>
                 <p className="pl-3 p-1">Catégorie:{annonce.Categorie}</p>
                 <p className="pl-3 p-1">Module:{annonce.ThemeAnn}</p>
             </div>

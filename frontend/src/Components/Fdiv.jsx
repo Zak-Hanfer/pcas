@@ -18,7 +18,7 @@ function FiDiv() {
                 <li className="invisible grid absolute w-full p-8 justify-center items-center top-28 md:top-40 lg:visible">
                     <a
                         href="/"
-                        className="px-4 py-2 bg-PrincipalCol flex  justify-center items-center rounded-md shadow hover:bg-gray-100"
+                        className="px-4 py-2 bg-PrincipalCol flex text-white justify-center items-center rounded-md shadow hover:bg-gray-100"
                     >
                         Liste des cours
                     </a>
