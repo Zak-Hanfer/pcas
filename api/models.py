@@ -6,7 +6,7 @@ from .constants import *
 
 
 class Wilaya(models.Model):
-    nomWilaya=models.CharField(max_length=25 ,primary_key=True)
+    nomWilaya=models.CharField(max_length=25 ,primary_key=True,choices=WILAYAS)
 
     def __str__(self):
         return str(self.nomWilaya)
@@ -29,8 +29,8 @@ class BienImmob(models.Model):
 
 class Adresse(models.Model):
     idAdresse=models.UUIDField(primary_key=True,default=uuid.uuid4,editable=False)
-    nomWilaya=models.ForeignKey(Wilaya,on_delete=models.CASCADE)
-    NomCommune=models.ForeignKey(Commune,on_delete=models.CASCADE)
+    nomWilaya=models.ForeignKey(Wilaya,on_delete=models.CASCADE,related_name='AdresseWilaya')
+    NomCommune=models.ForeignKey(Commune,on_delete=models.CASCADE,related_name='AdresseCommune')
     Immobilier=models.ForeignKey(BienImmob,on_delete=models.CASCADE,related_name='AdresseBienImob')
 
     def getidCommune(self):
@@ -38,6 +38,7 @@ class Adresse(models.Model):
 
 class Annonce(models.Model):
     idAnnonce=models.UUIDField(primary_key=True,default=uuid.uuid4,editable=False)
+    Titre=models.CharField(max_length=20)
     Description = models.TextField(max_length=500,null=True)
     Tarif = models.IntegerField()
     DatePublication=models.DateTimeField(auto_now_add=True)
@@ -46,11 +47,14 @@ class Annonce(models.Model):
     Modalite=models.CharField(max_length=20,choices=MODALITIES,default=2)
     # personne=models.ForeignKey(User,auto_created=True,on_delete=models.CASCADE)
     Localisation=models.ForeignKey(Adresse,on_delete=models.CASCADE,related_name='AnnonceLoca')
-    def getadresse(self):
-        return self.Description
+    def getIdAnnonce(self):
+        return self.idAnnonce
 
-class photo(models.Model):
-    idPhoto=models.UUIDField(primary_key=True,default=uuid.uuid4,editable=False)
-    path=models.FilePathField()
+class Photo(models.Model):
+    idPhoto=models.UUIDField(default=uuid.uuid4,editable=False)
+    # path=models.FilePathField()
+    image=models.ImageField(upload_to="images/")
     annonce=models.ForeignKey(Annonce,on_delete=models.CASCADE)
+    def getAnnonceId(self):
+        return self.annonce.getIdAnnonce()
 
