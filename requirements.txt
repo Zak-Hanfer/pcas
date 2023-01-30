@@ -1,3 +1,7 @@
 django-cors-headers
 djangorestframework
 django
+reactstrap
+react-hook-form
+react-dropzone
+zaki@zaki-HP:~/Documents/pcas/frontend (Houssem)$ npx tailwindcss -i ./src/Style/tailwind.css -o src/Style/main.css --watch
