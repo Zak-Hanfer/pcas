@@ -1,0 +1,17 @@
+version: '3'
+
+  frontend:
+    container_name: react-app
+    build: ./dockerFront
+    volumes:
+      - ./volume-test:/app
+    ports:
+      - "3000:3000"
+
+  backend:
+    container_name: django-app
+    build: ./dockerBack
+    volumes:
+      - ./volume-test-back:/app
+    ports:
+      - "8080:8080"
