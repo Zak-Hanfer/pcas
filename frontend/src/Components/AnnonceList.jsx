@@ -6,7 +6,7 @@ import Paginate from "./Paginate.jsx";
 let AnnonceList=()=>{
     const [annonces ,setAnnonces]=useState([])
     const [currentPage, setCurrentPage] = useState(1);
-    const [postsPerPage] = useState(6);
+    const [postsPerPage] = useState(8);
     const indexOfLastPost = currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
     const currentPosts = annonces.slice(indexOfFirstPost, indexOfLastPost);
