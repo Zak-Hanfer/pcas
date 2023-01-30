@@ -1,10 +1,10 @@
 import React from 'react';
 import googleicon from "../pages/google.png"
-
+import Header from "./header"
 import '../pages/App.css';
 function Form1() {
   return (
-    
+         
         <div className='form'>
           <h1>Inscription</h1>
           <input type="email" id="inpt1" placeholder='Enter Email'/> 
@@ -22,7 +22,7 @@ function Form1() {
           <div id="icongoogle">
           <img  src={googleicon}  width={50} height={50}/>
           </div>
-        
+            
           </div>
   
   );
