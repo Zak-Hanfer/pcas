@@ -1,0 +1,20 @@
+import React from "react";
+
+function SearchBar(){
+    return(<div className="">
+                    <div className='mx-auto'>
+                        <div className="relative flex items-center w:70 md:w-96 max-w-screen-sm h-12  rounded-lg border  ">
+                            <div className="grid place-items-center h-full w-12 text-gray-300">
+                            <img className="w-5 " src={require('../images/searchSymbol.png')} alt="teste" />
+                            </div>
+                            <input
+                            className="peer h-full w-full outline-none text-sm text-gray-700 pr-2"
+                            type="text"
+                            id="search"
+                            placeholder="Chercher un cour" /> 
+                        </div>
+                    </div>
+                </div>
+    );
+}
+export default SearchBar;
